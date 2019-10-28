@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Lifetime Solo Stats
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid *ngIf="playerData?.stats.p2; else notFound">
+    <ion-row>
+      <h1 class="pl-name">- {{ playerData?.epicUserHandle }} -</h1>
+      <ion-col size="6">
+        
+        <p>Score: <strong>{{playerData?.stats.p2.score.value | number }}</strong></p>
+        <p>Wins: <strong>{{playerData?.stats.p2.top1.displayValue}}</strong></p>
+        <p>Kills: <strong>{{playerData?.stats.p2.kills.displayValue}}</strong></p>
+      
+      </ion-col>
+      <ion-col size="6">
+
+        <p>Rank: <strong>#{{playerData?.stats.p2.score.rank | number }}</strong></p>
+        <p>Win %: <strong>{{playerData?.stats.p2.winRatio.displayValue}}</strong></p>
+        <p>Kills per Match: <strong>{{playerData?.stats.p2.kpg.value}}</strong></p>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ng-template #notFound>
+    <ion-grid>
+      <p>Player not found...</p>
+    </ion-grid>
+  </ng-template>
+  <button ion-button block (click)="changePlayer()">Change Player</button>
+
+</ion-content>

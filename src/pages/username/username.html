@@ -1,0 +1,41 @@
+<!--
+  Generated template for the UsernamePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton="true">
+    <ion-title>Enter Username</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="username" name="username" placeholder="Your Fortnite Username"></ion-input>
+  </ion-item>
+  <ion-list radio-group [(ngModel)]="platform">
+
+    <ion-item>
+      <ion-label>PC</ion-label>
+      <ion-radio value="pc" [checked]="pc"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Xbox</ion-label>
+      <ion-radio value="xb1"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>PlayStation</ion-label>
+      <ion-radio value="psn"></ion-radio>
+    </ion-item>
+
+  </ion-list>
+  <button [disabled]="!username" ion-button block (click)="getIn()">Sign In</button>
+
+</ion-content>

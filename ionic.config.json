@@ -1,0 +1,14 @@
+{
+  "name": "FrtBtlCrd",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/v1/profile/",
+      "proxyUrl": "https://api.fortnitetracker.com/v1/profile/"
+    }
+  ]
+}
