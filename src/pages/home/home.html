@@ -8,7 +8,7 @@
 
 <ion-content padding>
 
-  <ion-grid *ngIf="playerData?.stats.p2; else notFound">
+  <ion-grid *ngIf="playerData?.stats; else notFound">
     <ion-row>
       <h1 class="pl-name">- {{ playerData?.epicUserHandle }} -</h1>
       <ion-col size="6">

@@ -9,19 +9,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { UsernamePage } from '../pages/username/username';
+import { UsernamePageModule } from '../pages/username/username.module';
 import { PlayerProvider } from '../providers/player/player';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    UsernamePage
+    HomePage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    UsernamePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
